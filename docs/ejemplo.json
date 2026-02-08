@@ -1,0 +1,35 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "1944676506457479",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551467461",
+              "phone_number_id": "979289148595438"
+            },
+            "contacts": [
+              {
+                "profile": { "name": "javier galindo" },
+                "wa_id": "573173566652"
+              }
+            ],
+            "messages": [
+              {
+                "from": "573173566652",
+                "id": "wamid.HBgMNTczMTczNTY2NjUyFQIAEhggQUNEMDQyMTI3NDA1RjU0OTcxNjdGNUIwN0NBQjMwMjYA",
+                "timestamp": "1770560249",
+                "text": { "body": "Hola" },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}

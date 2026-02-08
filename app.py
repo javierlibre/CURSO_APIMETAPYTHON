@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import json
 
 app = Flask(__name__)
 
@@ -35,6 +36,8 @@ mensajes_log = []
 
 #función para agregar mensajes y guardarlos en la base de datos
 def agregar_mensajes_log(texto):
+  if isinstance(texto, dict):
+    texto = json.dumps(texto)
   mensajes_log.append(texto)
 
   #guardar el mensaje en la base de datos

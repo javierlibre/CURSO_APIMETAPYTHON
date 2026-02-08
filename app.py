@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import http.client
 import json
 
 app = Flask(__name__)
@@ -86,13 +87,59 @@ def recibir_mensajes(req):
             if "text" in messages:
               text = messages["text"]["body"]
               numero = messages["from"]
-              agregar_mensajes_log(json.dumps(text))
-              agregar_mensajes_log(json.dumps(numero))
+
+              enviar_mensajes_whatsapp(text, numero)
 
         return jsonify({'message': 'EVENT_RECEIVED'})
    
    except Exception as e:
         return jsonify({'message': 'EVENT_RECEIVED'})
+   
+def enviar_mensajes_whatsapp(texto, number):
+  texto = texto.lower()
+  w_token = "EAAtwn97dOL0BQiWbknDmXlqN7HAmxAtbbQ4Pt9rSPm3OEJBzu2304b2y02GI4LlDVlZATYj53kZAr65DWgz5bpFfAECXkXJt6CvXrwygb75AhnGmj7VZC7aWtIAGVJ31eB0ZAkUJwwsbGDRt7LpR2YBvMXSGXo0PfIybOt1whTdQD7wDlJQJ8DHTPeZCOkEBU9FbNyjG2FOPxLMLCDQDCvtUodZANgZBmVFLKoPy4uIVF8G7ZCLEf7okyrltUSP9XIFMT9IJVsZA4eUZCdotwdQUhG3Nql"
+
+  if "hola" in texto:
+    data = {
+      "messaging_product": "whatsapp",
+      "recipient_type": "individual",
+      "to": number,
+      "type": "text",
+      "text" : {
+        "preview_url": False,
+        "body": "🚀 Hola, ¿Cómo estás? Bienvenido."
+      }
+    }
+  else:
+    data = {
+      "messaging_product": "whatsapp",
+      "recipient_type": "individual",
+      "to": number,
+      "type": "text",
+      "text" : {
+        "preview_url": False,
+        "body": "Hola, ¿que tal? Visita mi WEbSite"
+      }
+    }
+
+  data = json.dumps(data)
+
+  headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer " + w_token
+  }
+
+  connection = http.client.HTTPSConnection("graph.facebook.com")
+  try:
+    connection.request("POST", "/v22.0/979289148595438/messages", data, headers)
+    response = connection.getresponse()
+    print(response.status, response.reason)
+  except Exception as e:
+    agregar_mensajes_log(json.dumps(e))
+
+  finally:
+    connection.close()
+
 
 if __name__ == '__main__':
   #app.run(debug=True)

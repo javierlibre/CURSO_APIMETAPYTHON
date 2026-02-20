@@ -575,7 +575,7 @@ def enviar_mensajes_whatsapp(texto, number):
             }
         } 
   else:
-    data = {
+        data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
@@ -583,24 +583,30 @@ def enviar_mensajes_whatsapp(texto, number):
             "interactive":{
                 "type":"button",
                 "body": {
-                    "text": "Academy Dsigns"
+                    "text": "¿Confirmas tu registro?"
                 },
                 "footer": {
-                    "text": "Language / Idioma"
+                    "text": "Selecciona una de las opciones"
                 },
                 "action": {
                     "buttons":[
                         {
                             "type": "reply",
                             "reply":{
-                                "id":"btnenglish",
-                                "title":"English"
+                                "id":"btnsi",
+                                "title":"Si"
                             }
                         },{
                             "type": "reply",
                             "reply":{
-                                "id":"btnspanish",
-                                "title":"Español"
+                                "id":"btnno",
+                                "title":"No"
+                            }
+                        },{
+                            "type": "reply",
+                            "reply":{
+                                "id":"btntalvez",
+                                "title":"Tal Vez"
                             }
                         }
                     ]

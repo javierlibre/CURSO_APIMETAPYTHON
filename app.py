@@ -576,43 +576,37 @@ def enviar_mensajes_whatsapp(texto, number):
         } 
   else:
         data = {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "interactive",
-            "interactive":{
-                "type":"button",
-                "body": {
-                    "text": "¿Confirmas tu registro?"
-                },
-                "footer": {
-                    "text": "Selecciona una de las opciones"
-                },
-                "action": {
-                    "buttons":[
-                        {
-                            "type": "reply",
-                            "reply":{
-                                "id":"btnsi",
-                                "title":"Si"
+                "messaging_product": "whatsapp",
+                "recipient_type": "individual",
+                "to": number,
+                "type": "interactive",
+                "interactive":{
+                    "type":"button",
+                    "body": {
+                        "text": "Academy Dsigns"
+                    },
+                    "footer": {
+                        "text": "Language / Idioma"
+                    },
+                    "action": {
+                        "buttons":[
+                            {
+                                "type": "reply",
+                                "reply":{
+                                    "id":"btnsi",
+                                    "title":"English"
+                                }
+                            },{
+                                "type": "reply",
+                                "reply":{
+                                    "id":"btnspanish",
+                                    "title":"Español"
+                                }
                             }
-                        },{
-                            "type": "reply",
-                            "reply":{
-                                "id":"btnno",
-                                "title":"No"
-                            }
-                        },{
-                            "type": "reply",
-                            "reply":{
-                                "id":"btntalvez",
-                                "title":"Tal Vez"
-                            }
-                        }
-                    ]
+                        ]
+                    }
                 }
             }
-        }
 
   data = json.dumps(data)
 

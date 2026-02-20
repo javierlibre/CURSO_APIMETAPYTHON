@@ -413,6 +413,17 @@ def enviar_mensajes_whatsapp(texto, number):
                 }
             }
         }
+  elif "btnsi" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Muchas Gracias por Aceptar."
+            }
+        }
   elif "btnsigns_eng" in texto:
         data = {
             "messaging_product": "whatsapp",

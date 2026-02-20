@@ -277,17 +277,22 @@ def enviar_mensajes_whatsapp(texto, number):
                             "rows":[
                                 {
                                     "id":"btnsigns_eng",
-                                    "title" : "Signs & Signages",
+                                    "title" : "Signs and Signages",
                                     "description": "We offer a variety of signs and signages for your business."
                                 },
                                 {
                                     "id":"btnwrap_eng",
                                     "title" : "Vehicle Wraps",
                                     "description": "We offer a variety of vehicle wraps for your business."
+                                },
+                                {
+                                    "id":"btnfoodtruck_eng",
+                                    "title" : "Food Truck",
+                                    "description": "We offer a variety of food truck build-outs and wraps."
                                 }
                             ]
                         },{
-                            "title":"Distribución y Entrega",
+                            "title":"Contact Us",
                             "rows":[
                                 {
                                     "id":"btndireccion",
@@ -407,56 +412,7 @@ def enviar_mensajes_whatsapp(texto, number):
                     ]
                 }
             }
-        }
-  elif "btnsi" in texto:
-        data ={
-            "messaging_product": "whatsapp",
-            "to": number,
-            "type": "interactive",
-            "interactive":{
-                "type" : "list",
-                "body": {
-                    "text": "Selecciona Alguna Opción"
-                },
-                "footer": {
-                    "text": "Selecciona una de las opciones para poder ayudarte"
-                },
-                "action":{
-                    "button":"Ver Opciones",
-                    "sections":[
-                        {
-                            "title":"Compra y Venta",
-                            "rows":[
-                                {
-                                    "id":"btncompra",
-                                    "title" : "Comprar",
-                                    "description": "Compra los mejores articulos de tecnologia"
-                                },
-                                {
-                                    "id":"btnvender",
-                                    "title" : "Vender",
-                                    "description": "Vende lo que ya no estes usando"
-                                }
-                            ]
-                        },{
-                            "title":"Distribución y Entrega",
-                            "rows":[
-                                {
-                                    "id":"btndireccion",
-                                    "title" : "Local",
-                                    "description": "Puedes visitar nuestro local."
-                                },
-                                {
-                                    "id":"btnentrega",
-                                    "title" : "Entrega",
-                                    "description": "La entrega se realiza todos los dias."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        }
+        }  
   elif "btnsigns_eng" in texto:
         data = {
             "messaging_product": "whatsapp",

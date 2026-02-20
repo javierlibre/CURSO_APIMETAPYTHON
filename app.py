@@ -273,17 +273,17 @@ def enviar_mensajes_whatsapp(texto, number):
                     "button":"Options",
                     "sections":[
                         {
-                            "title":"Compra y Venta",
+                            "title":"Our Services",
                             "rows":[
                                 {
-                                    "id":"btncompra",
-                                    "title" : "Comprar",
-                                    "description": "Compra los mejores articulos de tecnologia"
+                                    "id":"btnsigns_eng",
+                                    "title" : "Signs & Signages",
+                                    "description": "We offer a variety of signs and signages for your business."
                                 },
                                 {
-                                    "id":"btnvender",
-                                    "title" : "Vender",
-                                    "description": "Vende lo que ya no estes usando"
+                                    "id":"btnwrap_eng",
+                                    "title" : "Vehicle Wraps",
+                                    "description": "We offer a variety of vehicle wraps for your business."
                                 }
                             ]
                         },{

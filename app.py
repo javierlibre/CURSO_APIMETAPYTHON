@@ -593,7 +593,7 @@ def enviar_mensajes_whatsapp(texto, number):
                             {
                                 "type": "reply",
                                 "reply":{
-                                    "id":"btnsi",
+                                    "id":"btnenglish",
                                     "title":"English"
                                 }
                             },{

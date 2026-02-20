@@ -264,13 +264,13 @@ def enviar_mensajes_whatsapp(texto, number):
             "interactive":{
                 "type" : "list",
                 "body": {
-                    "text": "Selecciona Alguna Opción"
+                    "text": "Welcome to Academy Dsigns, visit our Web academyd-signs.com for more information"
                 },
                 "footer": {
-                    "text": "Selecciona una de las opciones para poder ayudarte"
+                    "text": "Select an option to help you"
                 },
                 "action":{
-                    "button":"Ver Opciones",
+                    "button":"Options",
                     "sections":[
                         {
                             "title":"Compra y Venta",

@@ -116,7 +116,7 @@ def recibir_mensajes(req):
    
 def enviar_mensajes_whatsapp(texto, number):
   texto = texto.lower()
-  w_token = "EAAtwn97dOL0BQ4cAqcAGkvhUJUrKQGubcavYOCJZCO7gsh3ui97mQDD8ls7BNJQyCRcwvjmo9mvaksgYvhefZCJUts72yy5ParnQ7CS7Ow4o2rTHZALKVGsxq7t8ZCzCWgPOVkr2j5fZBgk6EzNdZCkThtzUDrOnljOX5dN2ZCZCAQ06nZBwgVxB6DP382sAFPvZBliTZBs5JgwaZAfoIk0Tu4DTf67rZBGvEWF5ekSxwBM0OiYvGYZCbXxWuEvIVZB2lLivUlNpt3VSZCLyUGvpdmZC9viHbZBwbK"
+  w_token = "EAAtwn97dOL0BQ1XgtfmCRr52ZCMZAgKlANyDFiORtze71AqJ3WRosyskKxayypdI4vnSFDHOKvkIMY2qRMPweDZAaUAAQQ1LTBWfD2JKIN2sjZAipB7d70u1GsEt6TQ6Ayn8odVKzHFT7VG9bxWZAnYvNBYGGJVxGKs7Kuf3aIzZCfZBLlqmIZBLeMIp1p4KSZCSZAhI5tlQPaONrIhcGS37YoUaxc4OZBDWpgMyh5kWnew6sI4d5jnigMnG7hrZB8pSlvN9byyevoX16UiTyjMglP8D6gZDZD"
 
   if "hola" in texto:
     data = {
@@ -142,15 +142,16 @@ def enviar_mensajes_whatsapp(texto, number):
             }
         }
   elif "2" in texto:
+      #41.32064229530019, -72.85969102024134 coordenadas academy
       data = {
           "messaging_product": "whatsapp",
           "to": number,
           "type": "location",
           "location": {
-              "latitude": "-12.067158831865067",
-              "longitude": "-77.03377940839486",
-              "name": "Estadio Nacional del Perú",
-              "address": "Cercado de Lima"
+              "latitude": "41.32064229530019",
+              "longitude": "-72.85969102024134",
+              "name": "Academy Dsigns",
+              "address": "836 Foxon Rd, East Haven, CT 06513, United States"
           }
       }
   elif "3" in texto:
@@ -255,40 +256,114 @@ def enviar_mensajes_whatsapp(texto, number):
                 }
             }
         }
-  elif "btnsi" in texto:
-        data = {
+  elif "btnenglish" in texto:
+        data ={
             "messaging_product": "whatsapp",
-            "recipient_type": "individual",
             "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": False,
-                "body": "Muchas Gracias por Aceptar."
+            "type": "interactive",
+            "interactive":{
+                "type" : "list",
+                "body": {
+                    "text": "Welcome to Academy Dsigns, visit our Web academyd-signs.com for more information"
+                },
+                "footer": {
+                    "text": "Select an option to help you"
+                },
+                "action":{
+                    "button":"Options",
+                    "sections":[
+                        {
+                            "title":"Our Services",
+                            "rows":[
+                                {
+                                    "id":"btnsigns_eng",
+                                    "title" : "Signs & Signages",
+                                    "description": "We offer a variety of signs and signages for your business."
+                                },
+                                {
+                                    "id":"btnwrap_eng",
+                                    "title" : "Wrapping",
+                                    "description": "We offer a variety of wrapping services for custom and commercial vehicles."
+                                },
+                                {
+                                    "id":"btnfoodtruck_eng",
+                                    "title" : "Food Truck",
+                                    "description": "We offer a variety of food truck build-outs and wraps."
+                                }
+                            ]
+                        },{
+                            "title":"Contact us",
+                            "rows":[
+                                {
+                                    "id":"btnaddress_eng",
+                                    "title" : "Address",
+                                    "description": "You can visit our local."
+                                },
+                                {
+                                    "id":"btnelse_eng",
+                                    "title" : "Else",
+                                    "description": "If you need something else, contact us."
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         }
-  elif "btnno" in texto:
-        data = {
+  elif "btnspanish" in texto:
+        data ={
             "messaging_product": "whatsapp",
-            "recipient_type": "individual",
             "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": False,
-                "body": "Es una Lastima."
+            "type": "interactive",
+            "interactive":{
+                "type" : "list",
+                "body": {
+                    "text": "Bienvenidos a Academy Dsigns, visita nuestra página academyd-signs.com para más información"
+                },
+                "footer": {
+                    "text": "Selecciona una opción para ayudarte"
+                },
+                "action":{
+                    "button":"Opciones",
+                    "sections":[
+                        {
+                            "title":"Nuestros Servicios",
+                            "rows":[
+                                {
+                                    "id":"btnsigns_spa",
+                                    "title" : "Signs & Signages",
+                                    "description": "Ofrecemos una variedad de letreros y señalizaciones para tu negocio."
+                                },
+                                {
+                                    "id":"btnwrap_spa",
+                                    "title" : "Wrapping",
+                                    "description": "Ofrecemos una variedad de servicios de wrapping para vehículos personalizados y comerciales."
+                                },
+                                {
+                                    "id":"btnfoodtruck_spa",
+                                    "title" : "Food Truck",
+                                    "description": "Ofrecemos una variedad de servicios de food truck build-outs y wraps."
+                                }
+                            ]
+                        },{
+                            "title":"Contactanos",
+                            "rows":[
+                                {
+                                    "id":"btnaddress_spa",
+                                    "title" : "Dirección",
+                                    "description": "Puedes visitar nuestra tienda."
+                                },
+                                {
+                                    "id":"btnelse_spa",
+                                    "title" : "Otro",
+                                    "description": "Si necesitas algo más, contáctanos."
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         }
-
-  elif "btntalvez" in texto:
-        data = {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": False,
-                "body": "Estare a la espera."
-            }
-        } 
   elif "lista" in texto:
         data ={
             "messaging_product": "whatsapp",
@@ -338,7 +413,7 @@ def enviar_mensajes_whatsapp(texto, number):
                 }
             }
         }
-  elif "btncompra" in texto:
+  elif "btnsigns_eng" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -346,10 +421,10 @@ def enviar_mensajes_whatsapp(texto, number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Los mejos articulos top en ofertas."
+                "body": "Your business deserves to stand out. Let our expert sign services create eye-catching signage that grabs attention and drives results. Tell us about your project and we'll bring your vision to life."
             }
         } 
-  elif "btnvender" in texto:
+  elif "btnsigns_spa" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -357,20 +432,132 @@ def enviar_mensajes_whatsapp(texto, number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Excelente elección."
+                "body": "Tu negocio merece destacar. Deja que nuestros expertos en señalización creen letreros llamativos que atraigan la atención e impulsen resultados. Cuéntanos sobre tu proyecto y le daremos vida a tu visión."
             }
-        }                  
+        } 
+  elif "btnwrap_eng" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Transform your vehicle into a moving billboard with our premium wrapping services. From bold colors to custom designs, we deliver stunning wraps that protect your paint and make a statement. Let's create something unforgettable. Tell us about your project and we'll bring your vision to life."
+            }
+        }
+  elif "btnwrap_spa" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Transforma tu vehículo en una valla publicitaria móvil con nuestros servicios de wrapping premium. Desde colores vibrantes hasta diseños personalizados, ofrecemos wraps impresionantes que protegen tu pintura y marcan la diferencia. Creemos algo inolvidable. Cuéntanos sobre tu proyecto y le daremos vida a tu visión."
+            }
+        } 
+  elif "btnfoodtruck_eng" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "For over 7 years, we have been setting the standard in custom food truck builds and commercial kitchen installations. We don't just build trucks; we launch businesses. Tell us about your project and we'll bring your vision to life."
+            }
+        }
+  elif "btnfoodtruck_spa" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Por más de 7 años, hemos establecido el estándar en la construcción de food trucks personalizados e instalaciones de cocinas comerciales. No solo construimos camiones; lanzamos negocios. Cuéntanos sobre tu proyecto y le daremos vida a tu visión."
+            }
+        } 
+  elif "btnaddress_eng" in texto:
+        data = {
+          "messaging_product": "whatsapp",
+          "to": number,
+          "type": "location",
+          "location": {
+              "latitude": "41.32064229530019",
+              "longitude": "-72.85969102024134",
+              "name": "Academy Dsigns",
+              "address": "836 Foxon Rd, East Haven, CT 06513, United States"
+          }
+      } 
+  elif "btnaddress_spa" in texto:
+        data = {
+          "messaging_product": "whatsapp",
+          "to": number,
+          "type": "location",
+          "location": {
+              "latitude": "41.32064229530019",
+              "longitude": "-72.85969102024134",
+              "name": "Academy Dsigns",
+              "address": "836 Foxon Rd, East Haven, CT 06513, United States"
+          }
+      } 
+  elif "btnelse_eng" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Hello, thank you for contacting Academy Dsigns. How can I help you?"
+            }
+        } 
+  elif "btnelse_spa" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Hola, gracias por contactar a Academy Dsigns. ¿En qué puedo ayudarte?"
+            }
+        } 
   else:
     data = {
-      "messaging_product": "whatsapp",
-      "recipient_type": "individual",
-      "to": number,
-      "type": "text",
-      "text" : {
-        "preview_url": False,
-        "body": "🚀 Hola, visita mi web anderson-bastidas.com para más información.\n \n📌Por favor, ingresa un número #️⃣ para recibir información.\n \n1️⃣. Información del Curso. ❔\n2️⃣. Ubicación del local. 📍\n3️⃣. Enviar temario en PDF. 📄\n4️⃣. Audio explicando curso. 🎧\n5️⃣. Video de Introducción. ⏯️\n6️⃣. Hablar con AnderCode. 🙋‍♂️\n7️⃣. Horario de Atención. 🕜 \n0️⃣. Regresar al Menú. 🕜"
-      }
-    }
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "interactive",
+            "interactive":{
+                "type":"button",
+                "body": {
+                    "text": "Academy Dsigns"
+                },
+                "footer": {
+                    "text": "Language / Idioma"
+                },
+                "action": {
+                    "buttons":[
+                        {
+                            "type": "reply",
+                            "reply":{
+                                "id":"btnenglish",
+                                "title":"English"
+                            }
+                        },{
+                            "type": "reply",
+                            "reply":{
+                                "id":"btnspanish",
+                                "title":"Español"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
 
   data = json.dumps(data)
 

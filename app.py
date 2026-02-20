@@ -264,45 +264,40 @@ def enviar_mensajes_whatsapp(texto, number):
             "interactive":{
                 "type" : "list",
                 "body": {
-                    "text": "Welcome to Academy Dsigns, visit our Web academyd-signs.com for more information"
+                    "text": "Selecciona Alguna Opción"
                 },
                 "footer": {
-                    "text": "Select an option to help you"
+                    "text": "Selecciona una de las opciones para poder ayudarte"
                 },
                 "action":{
-                    "button":"Options",
+                    "button":"Ver Opciones",
                     "sections":[
                         {
-                            "title":"Our Services",
+                            "title":"Compra y Venta",
                             "rows":[
                                 {
-                                    "id":"btnsigns_eng",
-                                    "title" : "Signs & Signages",
-                                    "description": "We offer a variety of signs and signages for your business."
+                                    "id":"btncompra",
+                                    "title" : "Comprar",
+                                    "description": "Compra los mejores articulos de tecnologia"
                                 },
                                 {
-                                    "id":"btnwrap_eng",
-                                    "title" : "Wrapping",
-                                    "description": "We offer a variety of wrapping services for custom and commercial vehicles."
-                                },
-                                {
-                                    "id":"btnfoodtruck_eng",
-                                    "title" : "Food Truck",
-                                    "description": "We offer a variety of food truck build-outs and wraps."
+                                    "id":"btnvender",
+                                    "title" : "Vender",
+                                    "description": "Vende lo que ya no estes usando"
                                 }
                             ]
                         },{
-                            "title":"Contact us",
+                            "title":"Distribución y Entrega",
                             "rows":[
                                 {
-                                    "id":"btnaddress_eng",
-                                    "title" : "Address",
-                                    "description": "You can visit our local."
+                                    "id":"btndireccion",
+                                    "title" : "Local",
+                                    "description": "Puedes visitar nuestro local."
                                 },
                                 {
-                                    "id":"btnelse_eng",
-                                    "title" : "Else",
-                                    "description": "If you need something else, contact us."
+                                    "id":"btnentrega",
+                                    "title" : "Entrega",
+                                    "description": "La entrega se realiza todos los dias."
                                 }
                             ]
                         }

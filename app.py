@@ -295,14 +295,14 @@ def enviar_mensajes_whatsapp(texto, number):
                             "title":"Contact Us",
                             "rows":[
                                 {
-                                    "id":"btndireccion",
-                                    "title" : "Local",
-                                    "description": "Puedes visitar nuestro local."
+                                    "id":"btnaddress_eng",
+                                    "title" : "Address",
+                                    "description": "You can visit our local."
                                 },
                                 {
-                                    "id":"btnentrega",
-                                    "title" : "Entrega",
-                                    "description": "La entrega se realiza todos los dias."
+                                    "id":"btnelse_eng",
+                                    "title" : "Other",
+                                    "description": "Need something else? Contact us."
                                 }
                             ]
                         }

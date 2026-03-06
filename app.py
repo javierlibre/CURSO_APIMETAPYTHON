@@ -331,7 +331,7 @@ def enviar_mensajes_whatsapp(texto, number):
                             "rows":[
                                 {
                                     "id":"btnsigns_spa",
-                                    "title" : "Letreros y Señalizaciones",
+                                    "title" : "Letreros y Señales",
                                     "description": "Ofrecemos una variedad de letreros y señalizaciones para tu negocio."
                                 },
                                 {

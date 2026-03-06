@@ -324,15 +324,15 @@ def enviar_mensajes_whatsapp(texto, number):
                     "text": "Selecciona una opción para ayudarte"
                 },
                 "action":{
-                    "button":"Options",
+                    "button":"Opciones",
                     "sections":[
                         {
-                            "title":"Our Services",
+                            "title":"Nuestros Servicios",
                             "rows":[
                                 {
-                                    "id":"btnsigns_eng",
-                                    "title" : "Signs and Signages",
-                                    "description": "We offer a variety of signs and signages for your business."
+                                    "id":"btnsigns_spa",
+                                    "title" : "Letreros y Señalizaciones",
+                                    "description": "Ofrecemos una variedad de letreros y señalizaciones para tu negocio."
                                 },
                                 {
                                     "id":"btnwrap_eng",

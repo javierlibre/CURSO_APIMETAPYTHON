@@ -318,7 +318,7 @@ def enviar_mensajes_whatsapp(texto, number):
             "interactive":{
                 "type" : "list",
                 "body": {
-                    "text": "Welcome to Academy Dsigns, visit our Web academyd-signs.com for more information"
+                    "text": "Bienvenido a Academy Dsigns, visita nuestra página academyd-signs.com para más información"
                 },
                 "footer": {
                     "text": "Select an option to help you"

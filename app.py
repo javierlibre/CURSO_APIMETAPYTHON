@@ -321,7 +321,7 @@ def enviar_mensajes_whatsapp(texto, number):
                     "text": "Bienvenido a Academy Dsigns, visita nuestra página academyd-signs.com para más información"
                 },
                 "footer": {
-                    "text": "Select an option to help you"
+                    "text": "Selecciona una opción para ayudarte"
                 },
                 "action":{
                     "button":"Options",

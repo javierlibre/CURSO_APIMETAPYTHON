@@ -318,45 +318,45 @@ def enviar_mensajes_whatsapp(texto, number):
             "interactive":{
                 "type" : "list",
                 "body": {
-                    "text": "Bienvenidos a Academy Dsigns, visita nuestra página academyd-signs.com para más información"
+                    "text": "Welcome to Academy Dsigns, visit our Web academyd-signs.com for more information"
                 },
                 "footer": {
-                    "text": "Selecciona una opción para ayudarte"
+                    "text": "Select an option to help you"
                 },
                 "action":{
                     "button":"Options",
                     "sections":[
                         {
-                            "title":"Nuestros Servicios",
+                            "title":"Our Services",
                             "rows":[
                                 {
-                                    "id":"btnsigns_spa",
-                                    "title" : "Letreros y Señalizaciones",
-                                    "description": "Ofrecemos una variedad de letreros y señalizaciones para tu negocio."
+                                    "id":"btnsigns_eng",
+                                    "title" : "Signs and Signages",
+                                    "description": "We offer a variety of signs and signages for your business."
                                 },
                                 {
-                                    "id":"btnwrap_spa",
-                                    "title" : "Wrapping",
-                                    "description": "Ofrecemos una variedad de servicios de wrapping para vehículos personalizados y comerciales."
+                                    "id":"btnwrap_eng",
+                                    "title" : "Vehicle Wraps",
+                                    "description": "We offer a variety of vehicle wraps for your business."
                                 },
                                 {
-                                    "id":"btnfoodtruck_spa",
+                                    "id":"btnfoodtruck_eng",
                                     "title" : "Food Truck",
-                                    "description": "Ofrecemos una variedad de servicios de food truck build-outs y wraps."
+                                    "description": "We offer a variety of food truck build-outs and wraps."
                                 }
                             ]
                         },{
-                            "title":"Contactanos",
+                            "title":"Contact Us",
                             "rows":[
                                 {
-                                    "id":"btnaddress_spa",
-                                    "title" : "Dirección",
-                                    "description": "Puedes visitar nuestra tienda."
+                                    "id":"btnaddress_eng",
+                                    "title" : "Address",
+                                    "description": "You can visit our local."
                                 },
                                 {
-                                    "id":"btnelse_spa",
-                                    "title" : "Otro",
-                                    "description": "Pregunta a un humano"
+                                    "id":"btnelse_eng",
+                                    "title" : "Other",
+                                    "description": "Ask a human"
                                 }
                             ]
                         }
@@ -522,7 +522,7 @@ def enviar_mensajes_whatsapp(texto, number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Hola, gracias por contactar a Academy Dsigns. Un agente humano se pondrá en contacto contigo lo antes posible."
+                "body": "Hola, gracias por contactar a Academy Dsigns. ¿En qué puedo ayudarte?"
             }
         } 
   else:

@@ -331,32 +331,32 @@ def enviar_mensajes_whatsapp(texto, number):
                             "rows":[
                                 {
                                     "id":"btnsigns_spa",
-                                    "title" : "Signs and Signages",
-                                    "description": "We offer a variety of signs and signages for your business."
+                                    "title" : "Letreros y Señalizaciones",
+                                    "description": "Ofrecemos una variedad de letreros y señalizaciones para tu negocio."
                                 },
                                 {
-                                    "id":"btnwrap_eng",
-                                    "title" : "Vehicle Wraps",
-                                    "description": "We offer a variety of vehicle wraps for your business."
+                                    "id":"btnwrap_spa",
+                                    "title" : "Wrapping",
+                                    "description": "Ofrecemos una variedad de wrapping para tu negocio."
                                 },
                                 {
-                                    "id":"btnfoodtruck_eng",
+                                    "id":"btnfoodtruck_spa",
                                     "title" : "Food Truck",
-                                    "description": "We offer a variety of food truck build-outs and wraps."
+                                    "description": "Ofrecemos una variedad de food truck para tu negocio."
                                 }
                             ]
                         },{
-                            "title":"Contact Us",
+                            "title":"Contactanos",
                             "rows":[
                                 {
-                                    "id":"btnaddress_eng",
-                                    "title" : "Address",
-                                    "description": "You can visit our local."
+                                    "id":"btnaddress_spa",
+                                    "title" : "Dirección",
+                                    "description": "Puedes visitarnos en nuestra tienda."
                                 },
                                 {
-                                    "id":"btnelse_eng",
-                                    "title" : "Other",
-                                    "description": "Ask a human"
+                                    "id":"btnelse_spa",
+                                    "title" : "Otro",
+                                    "description": "Pregunta a un humano"
                                 }
                             ]
                         }
@@ -522,7 +522,7 @@ def enviar_mensajes_whatsapp(texto, number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Hola, gracias por contactar a Academy Dsigns. ¿En qué puedo ayudarte?"
+                "body": "Hola, gracias por contactar a Academy Dsigns. Un agente humano se pondrá en contacto contigo lo antes posible."
             }
         } 
   else:

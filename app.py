@@ -116,9 +116,9 @@ def recibir_mensajes(req):
    
 def enviar_mensajes_whatsapp(texto, number):
   texto = texto.lower()
-  w_token = "EAAtwn97dOL0BQ5C52hfgCsZArPYCM5EpZCHdKYZALMUwXYHflUONZCr0ngaiFCRNWouIbSb5Km4ikZB7KVs3FqJTHJnD6ZAaiqHOKpDzF7oCU6gPfenbVZA5flZBRCKuJyxhUeX5416jK2r9tr1rP3P7HX7AZBcvtzBzchoZA1eQjVdpfAkBzZCjEGkPzuqIEqZAZCZBMZAtLmrCqzTFrEZC5jpRNF8M97NkcV9NrjbgpjiL17dRZCMFPei9ZB76MuYTmw7w49hKkTWw1UAE03RCa3JHZBN5wZAV6AZDZD"
+  w_token = "EAAtwn97dOL0BQzqXSmjNzpkUWfp09FD3wTtrA3H58z4gRke4S36me3cQ804eiZCHlnHclvWD5ixG1EvZAxv1ZBFcCZAcLLZAByIhJ6uZApgkGwu9Jex9XyWXrkHqmmfBZAaRUPVV68ql6djDiaI8i8Ju1SJXHADlJZAT7BqW4ZCgGNuf23PODoIDGxKD8ajThjNLWpoLMzHRuyiC7UjTQg9liRKmgHsKgZABgZCZAiX6zfOZB4HEPgFiUTOxAZC3QZAtxzRkZB7oBLGnyHcgzY74qd34H6Mk3qkZD"
 
-  if "hola" in texto:
+  if "gulupa" in texto:
     data = {
       "messaging_product": "whatsapp",
       "recipient_type": "individual",

@@ -116,7 +116,7 @@ def recibir_mensajes(req):
    
 def enviar_mensajes_whatsapp(texto, number):
   texto = texto.lower()
-  w_token = "EAAtwn97dOL0BQZCkTfnYnNnbwUhmCz4IY205wUC6mSBOkSYlyhy632JZB8dU0uM4bY82mqKDITZB02xsZCvNSjIbJdWynEO0wAvnmmYUZBAOFi8aZCH2ZCq05SbYGJ6ZC9iYtgfZBqdsjMk7tiBKZCPZCtLbLZBkzkGuPbaptmZCDELYdPKFZBzjLb14hUiQoRfir7vFty0W6hxPIgJ8U2XIcSHryyEYZCBwVzfsGxkZC3AZCVDsLrdW60Ei85bbWDpA4W92yTzKHWPksAR3zaVmpZCHbM3VRJZBAZDZD"
+  w_token = "EAAtwn97dOL0BRJ2iA3d9QhIL2g8ky35e5e9SPhA6uukNYWZCjIsycDVqZBHBoZB677DTZBMjWZBKuaEKNrC2dAJMIIEHhvUmbZBdweVmlYGn8Sq3X4XgpAgUk5csIOrmQACqhQTs6oNmH2lBabpPJMHt4GNIiAIPx6EsCDZCyqO6L7K1F41P5jfcPU69hpBvfNBWYq6KklaefiORiNKtMZBEIy50mVyugIeZBV4J4wtnpHZBko9vOvQawi8DGZBnxZCeDTKfG2TflryNb2EbRhCMAfYZAOzAZD"
 
   if "gulupa" in texto:
     data = {
